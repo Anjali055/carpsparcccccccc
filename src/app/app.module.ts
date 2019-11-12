@@ -17,7 +17,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 
 //formbuilder
-import{FormsModule,ReactiveFormsModule} from '@angular/forms'
+import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -35,7 +35,7 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms'
     DashBordComponent,
     //EditProfileComponent,
     SidebarComponent,
-    ChangePasswordComponent,
+   // ChangePasswordComponent,
    
 
     

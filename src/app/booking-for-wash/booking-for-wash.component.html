@@ -1,0 +1,113 @@
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="card image" style="height:1100px;width:500px;">
+        <nav class="navbar navbar-dark">
+          <!-- <span class="navbar-brand" style="color:white">Change Password</span>
+                                          -->
+                                          <h1>hiiiiiiiiiiiiii</h1>
+          <h1 class="ml-4">Booking For Maintenance /Wash</h1>
+        </nav>
+        <div class="card-body">
+          <!-- {{BookWashModel.value|json}} -->
+          <h1 class="text-center"></h1>
+          <form action="" [formGroup]="BookWashModel" (ngSubmit)="BookForWash(BookWashModel.value)">
+            <div class="form-group input-group-lg">
+              <label for="vehicleName/Model"></label>
+              <input type="text" id="vehicleName/Model" class="form-control myinputcss" placeholder="Vehicle Name/Model"
+                formControlName="vihiclename">
+            </div>
+
+            <div class="form-group input-group-lg">
+              <div class="col-sm-5"></div>
+              <select id="inputState" class=" alert form-rounded form-control myinputcss col-sm-12 form-control-lg"
+                placeholder="Vehicle Type" formControlName="vehicletype">
+                <option value="">Vehicle Type</option>
+                <option selected>2 Wheeler</option>
+
+                <option selected>3 Wheeler</option>
+                <option selected>4 Wheeler</option>
+                <option selected>6 Wheeler</option>
+                <option selected>Cancel</option>
+
+              </select>
+            </div>
+            <div class="form-group input-group-lg">
+              <label for="contactperson"></label>
+              <input type="text" id="contactperson" class="form-control myinputcss" placeholder="Contact Person"
+                formControlName="contactPersonName">
+            </div>
+            <div class="form-group input-group-lg">
+              <label for="contactdetails"></label>
+              <input type="text" id="contactdetails" class="form-control myinputcss" placeholder="Contact Details"
+                formControlName="contactdetails">
+            </div>
+            <div class="form-group input-group-lg">
+              <div class="col-sm-5"></div>
+              <select id="inputState" class=" alert form-rounded form-control myinputcss col-sm-12 form-control-lg"
+                placeholder="Vehicle Type" formControlName="servicetype">
+                <option value="">Vehicle Type</option>
+                <option selected>2 Wheeler</option>
+
+                <option selected>3 Wheeler</option>
+                <option selected>4 Wheeler</option>
+                <option selected>6 Wheeler</option>
+                <option selected>Cancel</option>
+
+              </select>
+            </div>
+
+            <div class="form-group input-group-lg">
+              <div class="col-sm-5"></div>
+              <textarea class=" alert form-rounded form-control col-sm-12" rows="2" id="comment"
+                placeholder="Requirements/Description*" formControlName="requireDescription"></textarea>
+            </div>
+
+            <div class="form-group input-group-lg">
+              <label for="arealocation"></label>
+              <input type="text" id="arealocation" class="form-control myinputcss" placeholder="Area Location"
+                formControlName="arealocation">
+            </div>
+            <div>
+              <label for="pickup" class="col-sm-5 alert-link mx-xl-n2 myinputcss" style="color: aliceblue;">Need
+                Pick-up</label>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="customRadio" value="Yes"
+                  formControlName="needpickup">
+                <label class="custom-control-label" for="customRadio">Yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="customRadio2" value="No"
+                  formControlName="needpickup">
+                <label class="custom-control-label" for="customRadio2">No</label>
+              </div>
+            </div>
+
+            <div class="form-group input-group-lg">
+              <div class="form-group col-sm-3"></div>
+              <input type="date" name="pickupdate" placeholder="Pick-up-Date"
+                class="alert form-rounded form-control col-sm-12" formControlName="pickupdate">
+            </div>
+
+            <div class="form-group input-group-lg">
+              <label for="budprice"></label>
+              <input type="text" id="budprice" class="form-control myinputcss" placeholder="Budget Price"
+                formControlName="budprice">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary buttonCancelUpdate ml-5"
+                style="margin-right:20px">Submit</button>
+              <button type="reset" class="btn btn-danger buttonCancelUpdate">Cancel</button>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="col-md-4">
+
+
+        </div>
+      </div>
+    </div>
+  </div>
