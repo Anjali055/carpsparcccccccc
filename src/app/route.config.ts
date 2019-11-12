@@ -10,6 +10,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 //import {} from './sign-up/SignupCustomModule'
+//import{} from './edit-profile/editmodule.module#EditCustomModule'
 
 export const MyRoutes:Routes=
 [
@@ -28,14 +29,10 @@ export const MyRoutes:Routes=
 // },
     {path:'MenuDashboard',component:DashBordComponent,
      children: [
-                 { path:'editprofile',component:EditProfileComponent},
+                 { path:'editprofile',loadChildren:'./edit-profile/editmodule.module#EditCustomModule'},
                  {path:'chagepassword',component:ChangePasswordComponent}
              ]
 
-     }
-    
-   
-
-             
+     }            
     
 ]

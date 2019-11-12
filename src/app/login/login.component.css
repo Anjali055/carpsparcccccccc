@@ -4,13 +4,13 @@ button{
     height: 60px;
     width: 140px;
 }
-.image{
+/*.image{
     height:40em; 
     background-size:cover;
     width:auto;
     background-image:url('D:\Angularjs\CarSparcFinalProject\src\assets\background.jpg');
     background-position:50% 50%;
-  }
+  }*/
 
 #log{
     border: 2px solid white;

@@ -4,6 +4,7 @@
         <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
+               <form action=""[formGroup]="editModel"(ngSubmit)="saveAction(editModel.value)">             
                     <div class="card image" style="height:950px;width:400px;">
                                
                                 <!-- <nav class="navbar navbar-light bg-light"style="height:100px;width:375px;">
@@ -17,23 +18,23 @@
                         
                         <div class="form-group input-group-lg">
                                 <label for="Name"></label>
-                                <input type="text" id="Name" class="form-control myinputcss" placeholder="Name" >
+                                <input type="text" id="Name" class="form-control myinputcss" placeholder="Name" formControlName="Name" >
                         </div>
                         <div class="form-group input-group-lg">
-                                        <label for="contact"></label>
-                                        <input type="tel" id="contact" class="form-control myinputcss" placeholder="Contact Number" >
+                                        <label for="Mobileno"></label>
+                                        <input type="tel" id="Mobileno" class="form-control myinputcss" placeholder="Contact Number" formControlName="Mobileno">
                         </div>
                         <div class="form-group input-group-lg">
-                                        <label for="email"></label>
-                                        <input type="email" id="email" class="form-control myinputcss" placeholder="Email" >
+                                        <label for="Email"></label>
+                                        <input type="email" id="Email" class="form-control myinputcss" placeholder="Email" formControlName="Email">
                         </div>
                         <div class="form-group input-group-lg">
-                                        <label for="pincode"></label>
-                                        <input type="text" id="pincode" class="form-control myinputcss" placeholder="Pincode" >
+                                        <label for="Pincode"></label>
+                                        <input type="text" id="Pincode" class="form-control myinputcss" placeholder="Pincode" formControlName="Pincode">
                         </div>
                         <div class="form-group input-group-lg">
-                                <label for="address"></label>
-                                <textarea class="form-control myinputcss" rows="3" id="address" placeholder="Address"></textarea>
+                                <label for="Address"></label>
+                                <textarea class="form-control myinputcss" rows="3" id="Address" placeholder="Address" formControlName="Address"></textarea>
                         </div>
                         <div class="form-group">
                                 <button type="submit" class="btn btn-primary buttonCancelUpdate" style="margin-right:20px">Update</button>
@@ -50,8 +51,10 @@
 
 
                  </div>
+                 
 
-                  </div>        
+                  </div>  
+                </form>      
                 </div>
 
                 <div class="col-md-4">

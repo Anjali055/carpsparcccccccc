@@ -1,30 +1,31 @@
 import { NgModule } from '@angular/core'
-import { SignUpComponent } from './sign-up.component';
+import { EditProfileComponent } from './edit-profile.component';
 import { RouterModule, Routes } from '@angular/router'
 import { CommonModule } from '@angular/common';
 import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
-export const signupCustmodel: Routes = [
-    { path: '', redirectTo: 'usersignUp', pathMatch: 'full' },
 
-    { path: 'usersignUp', component: SignUpComponent }
+export const editRoute: Routes = [
+    { path: '', redirectTo: 'editprofile', pathMatch: 'full' },
+
+    { path: 'editprofile', component:EditProfileComponent }
 
 ];
 
 @NgModule({
     declarations: [
-        SignUpComponent
+        EditProfileComponent
     ],
     imports: [
         CommonModule, FormsModule
         , ReactiveFormsModule
-        , RouterModule.forChild(signupCustmodel)
+        , RouterModule.forChild(editRoute)
     ],
     providers: [],
-    exports: [SignUpComponent]
+    exports: [EditProfileComponent]
 })
 
 
-export class SignupCustomModule {
+export class EditCustomModule {
 
 }

@@ -12,12 +12,15 @@ import { MyRoutes } from './route.config';
 import { SetPasswordComponent } from './set-password/set-password.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { DashBordComponent } from './dash-bord/dash-bord.component';
-import { EditProfileComponent } from './edit-profile/edit-profile.component';
+//import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 
 //formbuilder
 import{FormsModule,ReactiveFormsModule} from '@angular/forms'
+
+
+
 
 
 @NgModule({
@@ -30,7 +33,7 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms'
     SetPasswordComponent,
     ForgotPasswordComponent,
     DashBordComponent,
-    EditProfileComponent,
+    //EditProfileComponent,
     SidebarComponent,
     ChangePasswordComponent,
    
@@ -42,8 +45,9 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms'
     //formcontrol
     FormsModule,
     ReactiveFormsModule,
-
-    AppRoutingModule,RouterModule.forRoot(MyRoutes)
+    
+    AppRoutingModule,RouterModule.forRoot(MyRoutes),
+    
   ],
   providers: [],
   bootstrap: [MasterComponent]

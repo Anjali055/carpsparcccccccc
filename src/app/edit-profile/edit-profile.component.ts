@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-profile',
@@ -7,8 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditProfileComponent implements OnInit {
 
-  constructor() { }
+  editModel:FormGroup;
 
+  constructor( private fb:FormBuilder) {
+
+    this.editModel=this.fb.group({
+
+      Name:[''],
+      Mobileno:[''],
+      Email:[''],
+      Pincode:[''],
+      Address:['']   
+
+  })
+  }
+  saveAction(aa){
+    
+    alert(JSON.stringify(aa))
+}
   ngOnInit() {
   }
 
