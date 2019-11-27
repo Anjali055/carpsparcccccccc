@@ -1,0 +1,58 @@
+.mybutton{
+    
+    
+    border-radius: 30px;
+    height: 60px;
+    width: 300px;
+    
+
+}
+
+
+
+.image{
+    height:40em; 
+    background-size:cover;
+    width:auto;
+    background-image:url('D:\Angularjs\CarSparcFinalProject\src\assets\background.jpg');
+    background-position:50% 50%;
+  }
+
+  label{
+    font-size: 15px;
+    color:wheat;
+}
+#log{
+    border: 2px solid white;
+    height: 550px;
+     padding: 40px 35px;
+     /* margin-left:400px;  */
+     width: 400px;
+     
+  
+
+    
+    
+    
+    /* -webkit-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+-moz-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75); */
+-webkit-box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
+-moz-box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
+box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
+    
+     
+}
+container{
+    padding: 25px 25px;
+}
+
+button{
+   
+    /* margin-right:200px; */
+    -webkit-box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
+    -moz-box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
+    box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
+    
+   
+}

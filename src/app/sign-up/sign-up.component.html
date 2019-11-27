@@ -1,0 +1,58 @@
+
+<div class="container-fluid image">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+
+<!-- <h5 style="color: white">{{signupModel.value|json}}</h5> -->
+<form action=""[formGroup]="signupModel"(ngSubmit)="saveAction(signupModel.value)">
+
+            <div class="card image" style="width:400px;height: 700px;">
+                <div class="card-body">
+                    <h1 class="text-center" style="color:white">Sign-up</h1>
+                    
+                
+                    <div class="form-group input-group-lg   ">
+                        <label for="uname"></label>
+                        <input type="text" id="uname" class="form-control" placeholder="Name" formControlName="Name">
+                    </div>
+
+                    <div class="form-group input-group-lg   ">
+                        <label for="umobile"></label>
+                        <input type="text" id="umobile" class="form-control" placeholder="Mobile No" formControlName="Mobileno">
+                    </div>
+
+                    <div class="form-group input-group-lg ">
+                        <label for="uemail"></label>
+                        <input type="text" id="uname" class="form-control" placeholder="Email" formControlName="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block  input-group-lg mybutton">Generate OTP</button>
+                    </div>
+
+                    <div class="form-group input-group-lg ">
+                            <label for="uotp"></label>
+                            <input type="text" id="uotp" class="form-control" placeholder="Enter OTP"formControlName="Otp">
+                    </div>
+                <div class="row">
+                        <div class="col-sm-12 text-center">
+                                <button id="btnSearch"[routerLink]="['/setPassword']" class="btn btn-primary btn-md center-block" Style="margin-right: 15px">Sign-up</button>
+                                 <button id="btnClear"[routerLink]="['/']" class="btn btn-danger btn-md center-block" >Cancel</button>
+                             </div>
+                        
+                </div>
+
+                </div>
+        </div>
+</form>
+    </div>
+
+            <div class="col-md-4"></div>   
+      </div>  
+        
+</div>
+
+
+
+
