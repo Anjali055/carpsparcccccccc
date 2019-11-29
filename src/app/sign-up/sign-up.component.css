@@ -16,13 +16,11 @@
         height:60em;
         background-size:cover;
         width:auto;
-<<<<<<< HEAD
         background-image:url('/assets/background.jpg');
-=======
-        background-image: url('/assets/background.jpg');
 
+       
         /* background-image:url('D:\Angularjs\CarSparcFinalProject\src\assets\background.jpg'); */
->>>>>>> 656290c6b87518e5b648e2949a54f09b924a9a09
+
         background-position:50% 50%;
     }
     .card{

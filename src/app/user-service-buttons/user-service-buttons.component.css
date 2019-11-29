@@ -10,7 +10,7 @@
 
 
 
-/*.image{
+.image{
     height:40em; 
     background-size:cover;
     width:auto;
@@ -18,7 +18,7 @@
 
     /* background-image:url('D:\Angularjs\CarSparcFinalProject\src\assets\background.jpg'); */
     background-position:50% 50%;
-  }*/
+  }
 
   label{
     font-size: 15px;
