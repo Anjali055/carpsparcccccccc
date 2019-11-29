@@ -4,7 +4,7 @@
         <div class="col-md-4">
 
             <!-- <h5 style="color: white">{{signupModel.value|json}}</h5> -->
-            <form action="" [formGroup]="signupModel" (ngSubmit)="saveAction(signupModel.value)">
+            <form action="" [formGroup]="signupModel">
 
                 <div class="card image" style="width:400px;height: 700px;">
                     <div class="card-body">
@@ -41,7 +41,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-12 text-center">
-                                <button id="btnSearch" [routerLink]="['/setPassword']"
+                                <button id="btnSearch" (click)="saveAction(signupModel.value)" [routerLink]="['/setPassword']"
                                     class="btn btn-primary btn-md center-block"
                                     Style="margin-right: 15px">Sign-up</button>
                                 <button id="btnClear" [routerLink]="['/']"

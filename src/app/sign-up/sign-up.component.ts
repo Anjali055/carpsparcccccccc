@@ -25,7 +25,8 @@ export class SignUpComponent implements OnInit {
 
   saveAction(a) {
 
-    alert(JSON.stringify(a))
+    //alert(JSON.stringify(a))
+    console.log(JSON.stringify(a));
   }
 
 
