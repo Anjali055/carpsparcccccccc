@@ -4,21 +4,18 @@ button{
     height: 60px;
     width: 140px;
 }
-/*.image{
+.image{
     height:40em; 
     background-size:cover;
     width:auto;
     background-image: url('/assets/background.jpg');
 
-    /* background-image:("assets/background.jpg"); */
+   
     background-position:50% 50%;
-<<<<<<< HEAD
-  }*/
-=======
-    /* <img src="assets/car.png" class="brand_logo" alt="Logo" width="300"height="300"> */
 
   }
->>>>>>> 656290c6b87518e5b648e2949a54f09b924a9a09
+   
+
 
 #log{
     border: 2px solid white;
