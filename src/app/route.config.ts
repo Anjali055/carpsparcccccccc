@@ -33,6 +33,7 @@ export const MyRoutes: Routes =
                 //  {path:'Book',component:BookingForWashComponent},
                 { path: 'Book', loadChildren: './booking-for-wash/booking.module#BookingModule' },
                 {path:'changepassword',loadChildren:'./change-password/change_password.module#ChangePasswordModule'},
+                { path: 'editprofile', loadChildren: './edit-profile/editmodule.module#EditCustomModule'},
                 { path: 'editprofile', loadChildren: './edit-profile/editmodule.module#EditCustomModule' },
                // { path: 'chagepassword', component: ChangePasswordComponent }
             ]
