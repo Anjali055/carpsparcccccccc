@@ -20,7 +20,7 @@ export class ChangePasswordComponent  {
    }
 
    ChangePassword(password:any){
-    //alert(JSON.stringify(books))
+    alert(JSON.stringify(password))
     console.log(JSON.stringify(password))
   
    }
