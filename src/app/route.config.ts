@@ -23,7 +23,9 @@ export const MyRoutes: Routes =
         // {path:'usersignUp',component:SignUpComAponent},
         { path: 'usersignUp', loadChildren: './sign-up/SignupCustomModule#SignupCustomModule' },
         { path: 'setPassword', component: SetPasswordComponent },
-        { path: 'ForgotPassword', component: ForgotPasswordComponent },
+        //{ path: 'ForgotPassword', component: ForgotPasswordComponent },
+        {path:'ForgotPassword',loadChildren:'./forgot-password/ForgotPasswordCustomModule#ForgotPasswordCustomModule'},
+    
         
         {
             path: 'MenuDashboard', component: DashBordComponent,

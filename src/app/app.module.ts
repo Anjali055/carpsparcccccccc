@@ -31,7 +31,7 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
     MasterComponent,
     // SignUpComponent,
     SetPasswordComponent,
-    ForgotPasswordComponent,
+    //ForgotPasswordComponent,
     DashBordComponent,
     //EditProfileComponent,
     SidebarComponent,
