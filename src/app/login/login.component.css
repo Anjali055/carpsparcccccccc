@@ -8,8 +8,12 @@ button{
     height:40em; 
     background-size:cover;
     width:auto;
-    background-image:url('D:\Angularjs\CarSparcFinalProject\src\assets\background.jpg');
+    background-image: url('/assets/background.jpg');
+
+    /* background-image:("assets/background.jpg"); */
     background-position:50% 50%;
+    /* <img src="assets/car.png" class="brand_logo" alt="Logo" width="300"height="300"> */
+
   }
 
 #log{
