@@ -14,6 +14,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 //import{} from './edit-profile/editmodule.module#EditCustomModule'
 
 
+
 import { BookingForWashComponent } from './booking-for-wash/booking-for-wash.component';
 export const MyRoutes: Routes =
     [
@@ -22,14 +23,10 @@ export const MyRoutes: Routes =
         // {path:'usersignUp',component:SignUpComAponent},
         { path: 'usersignUp', loadChildren: './sign-up/SignupCustomModule#SignupCustomModule' },
         { path: 'setPassword', component: SetPasswordComponent },
-        { path: 'ForgotPassword', component: ForgotPasswordComponent },
-        //     {path:'sidebar',component:SidebarComponent,
-        //     children: [
-        //         { path:'editprofile',component:EditProfileComponent},
-        //         {path:'chagepassword',component:ChangePasswordComponent}
-        //     ]
-
-        // },
+        //{ path: 'ForgotPassword', component: ForgotPasswordComponent },
+        {path:'ForgotPassword',loadChildren:'./forgot-password/ForgotPasswordCustomModule#ForgotPasswordCustomModule'},
+    
+        
         {
             path: 'MenuDashboard', component: DashBordComponent,
             children: [
@@ -37,6 +34,7 @@ export const MyRoutes: Routes =
                 { path: 'Book', loadChildren: './booking-for-wash/booking.module#BookingModule' },
                 {path:'changepassword',loadChildren:'./change-password/change_password.module#ChangePasswordModule'},
                 { path: 'editprofile', loadChildren: './edit-profile/editmodule.module#EditCustomModule'},
+                { path: 'editprofile', loadChildren: './edit-profile/editmodule.module#EditCustomModule' },
                // { path: 'chagepassword', component: ChangePasswordComponent }
             ]
 

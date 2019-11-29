@@ -1,18 +1,50 @@
+<<<<<<< HEAD
 .image{
     /* height:40em;  */
     height:60em;
+=======
+.mybutton{
+    
+    
+    border-radius: 30px;
+    height: 60px;
+    width: 300px;
+    
+
+}
+
+
+
+.image{
+    height:40em; 
+>>>>>>> 641807894f082adfaee91460e19c92d0e44729d5
     background-size:cover;
     width:auto;
     background-image: url('/assets/background.jpg');
 
     /* background-image:url('D:\Angularjs\CarSparcFinalProject\src\assets\background.jpg'); */
     background-position:50% 50%;
+<<<<<<< HEAD
 }
 .card{
     border:2px solid white;
     /* margin-top: 0px; */
     /* position: sticky;
     padding: 20px 20px; 
+=======
+  }
+
+  label{
+    font-size: 15px;
+    color:wheat;
+}
+#log{
+    border: 2px solid white;
+    height: 550px;
+     padding: 40px 35px;
+     /* margin-left:400px;  */
+     width: 400px;
+>>>>>>> 641807894f082adfaee91460e19c92d0e44729d5
      
     margin-bottom: 30px; */
     border-radius: 20px;
