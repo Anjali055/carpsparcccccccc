@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router'
+import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { UserServiceButtonsComponent } from './user-service-buttons/user-service-buttons.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
