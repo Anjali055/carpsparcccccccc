@@ -33,7 +33,7 @@ export class SignUpComponent implements OnInit {
 
     //alert(JSON.stringify(a))
     console.log(JSON.stringify(data));
-    
+
 
     this.Servicesignup.saveAllUser(data).subscribe
     (
