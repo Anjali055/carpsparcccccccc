@@ -29,7 +29,8 @@ export class BookingForWashComponent  {
    BookForWash(books:any){
     //alert(JSON.stringify(books))
     console.log(JSON.stringify(books))
-  
+    alert(JSON.stringify(books))
+    
    }
   }
 

@@ -10,8 +10,11 @@
                     <div class="card-body">
                         <h1 class="text-center" style="color:white">Sign-up</h1>
 
+                        
 
-                        <div class="form-group input-group-lg   ">
+
+
+                        <div class="form-group input-group-lg">
                             <label for="uname"></label>
                             <input type="text" id="uname" class="form-control" placeholder="Name"
                                 formControlName="name">
@@ -30,19 +33,28 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block  input-group-lg mybutton">Generate
+                            <button type="submit" class="btn btn-primary btn-block  input-group-lg mybutton"
+                                (click)="randomString()">Generate
                                 OTP</button>
                         </div>
 
-                        <div class="form-group input-group-lg ">
-                            <label for="uotp"></label>
-                            <input type="text" id="uotp" class="form-control" placeholder="Enter OTP"
-                                formControlName="otp">
+
+                        <div *ngIf="show_dialog">
+                            <div class="form-group input-group-lg ">
+                                <label for="uotp"></label>
+                                <input type="text" id="uotp" class="form-control" placeholder="Enter OTP"
+                                    formControlName="otp">
+                            </div>
+                            
                         </div>
+
+
+
+
                         <div class="row">
                             <div class="col-sm-12 text-center">
-                                <button id="btnSearch" (click)="saveAction(signupModel.value)" [routerLink]="['/setPassword']"
-                                    class="btn btn-primary btn-md center-block"
+                                <button id="btnSearch" (click)="saveAction(signupModel.value)"
+                                    [routerLink]="['/setPassword']" class="btn btn-primary btn-md center-block"
                                     Style="margin-right: 15px">Sign-up</button>
                                 <button id="btnClear" [routerLink]="['/']"
                                     class="btn btn-danger btn-md center-block">Cancel</button>
