@@ -18,6 +18,9 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 
 //formbuilder
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
+import{HttpClientModule} from '@angular/common/http';
+import { ViewallComponent } from './viewall/viewall.component'
+import { viewallService } from './viewall/viewall.service';
 
 
 
@@ -35,6 +38,7 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
     DashBordComponent,
     //EditProfileComponent,
     SidebarComponent,
+    ViewallComponent,
    // ChangePasswordComponent,
    
 
@@ -45,6 +49,12 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
     //formcontrol
     FormsModule,
     ReactiveFormsModule,
+    //----imported this for service---
+    HttpClientModule,
+
+
+    
+    
     
     AppRoutingModule,RouterModule.forRoot(MyRoutes),
     

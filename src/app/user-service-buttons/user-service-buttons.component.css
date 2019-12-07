@@ -1,4 +1,6 @@
 
+
+
 .mybutton{
     border-radius: 30px;
     height: 60px;
@@ -13,6 +15,7 @@
 
     /* background-image:url('D:\Angularjs\CarSparcFinalProject\src\assets\background.jpg'); */
     background-position:50% 50%;
+
 }
 label{
     font-size: 15px;
@@ -28,11 +31,23 @@ label{
 
 
 
+
  
 
    
 
+
+
+     
+    /* -webkit-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+-moz-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75); */
+-webkit-box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
+-moz-box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
+box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
     
+
+
     /* -webkit-box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
         -moz-box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
          box-shadow: -5px 2px 62px 8px rgba(240,231,240,1); */
@@ -52,14 +67,30 @@ img{
     width:100px;
     margin:auto;
 
+
 }
 
-h1{
-    color:white;
-    text-align: center;
-    font-weight: bolder;
-    font-size: 25px;
+button{
+   
+    /* margin-right:200px; */
+    -webkit-box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
+    -moz-box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
+    box-shadow: -5px 2px 62px 8px rgba(240,231,240,1);
+    
+   
 }
+
+
+container{
+    padding: 25px 25px;
+}  
+  
+
+  
+
+     
+   
+
 
 
 
@@ -67,4 +98,5 @@ h1{
 container{
    padding: 25px 25px; 
 }
+
 

@@ -16,6 +16,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 
 
 import { BookingForWashComponent } from './booking-for-wash/booking-for-wash.component';
+import { ViewallComponent } from './viewall/viewall.component';
 export const MyRoutes: Routes =
     [
         { path: '', component: LoginComponent },
@@ -34,6 +35,8 @@ export const MyRoutes: Routes =
                 { path: 'Book', loadChildren: './booking-for-wash/booking.module#BookingModule' },
                 {path:'changepassword',loadChildren:'./change-password/change_password.module#ChangePasswordModule'},
                 { path: 'editprofile', loadChildren: './edit-profile/editmodule.module#EditCustomModule'},
+                {path:'viewall', component:ViewallComponent}
+                
                // { path: 'chagepassword', component: ChangePasswordComponent }
             ]
 

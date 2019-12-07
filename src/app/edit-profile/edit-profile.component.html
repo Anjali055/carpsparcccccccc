@@ -1,72 +1,79 @@
 <!-- <h1 class="text-center">hello</h1> -->
 
- <div class="container-fluid  " >
+<div class="container-fluid  ">
         <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
-               <form action=""[formGroup]="editModel"(ngSubmit)="saveAction(editModel.value)">             
-                    <div class="card image" style="height:950px;width:400px;">
-                               
-                                <!-- <nav class="navbar navbar-light bg-light"style="height:100px;width:375px;">
+                        <form action="" [formGroup]="editModel">
+                                <div class="card image" style="height:950px;width:400px;">
+
+                                        <!-- <nav class="navbar navbar-light bg-light"style="height:100px;width:375px;">
                                                 <span class="navbar-brand ">Navbar</span>
                                               </nav>  -->
-                <div class="card-body">
-                        <h1 class="text-center" ></h1>
-                        
-                        <img class="img" src="assets\Avtar.png" class="rounded-circle mx-auto d-block">
-                        
-                        
-                        <div class="form-group input-group-lg">
-                                <label for="Name"></label>
-                                <input type="text" id="Name" class="form-control myinputcss" placeholder="Name" formControlName="Name" >
-                        </div>
-                        <div class="form-group input-group-lg">
-                                        <label for="Mobileno"></label>
-                                        <input type="tel" id="Mobileno" class="form-control myinputcss" placeholder="Contact Number" formControlName="Mobileno">
-                        </div>
-                        <div class="form-group input-group-lg">
-                                        <label for="Email"></label>
-                                        <input type="email" id="Email" class="form-control myinputcss" placeholder="Email" formControlName="Email">
-                        </div>
-                        <div class="form-group input-group-lg">
-                                        <label for="Pincode"></label>
-                                        <input type="text" id="Pincode" class="form-control myinputcss" placeholder="Pincode" formControlName="Pincode">
-                        </div>
-                        <div class="form-group input-group-lg">
-                                <label for="Address"></label>
-                                <textarea class="form-control myinputcss" rows="3" id="Address" placeholder="Address" formControlName="Address"></textarea>
-                        </div>
-                        <div class="form-group">
-                                <button type="submit" class="btn btn-primary buttonCancelUpdate" style="margin-right:20px">Update</button>
-                                <button type="reset" class="btn btn-danger buttonCancelUpdate">Cancel</button>
-                        </div>
-                
-                        <div class="form-group">
+                                        <div class="card-body">
+                                                <h1 class="text-center"></h1>
 
-                                <button type="submit" class="btn btn-primary  btn-block mybutton" >Change Password</button>
-                        </div>
-                       
+                                                <img class="img" src="assets\Avtar.png"
+                                                        class="rounded-circle mx-auto d-block">
 
 
+                                                <div class="form-group input-group-lg">
+                                                        <label for="Name"></label>
+                                                        <input type="text" id="Name" class="form-control myinputcss"
+                                                                placeholder="Name" formControlName="name">
+                                                </div>
+                                                <div class="form-group input-group-lg">
+                                                        <label for="Mobileno"></label>
+                                                        <input type="tel" id="Mobileno" class="form-control myinputcss"
+                                                                placeholder="Contact Number" formControlName="mobileno">
+                                                </div>
+                                                <div class="form-group input-group-lg">
+                                                        <label for="Email"></label>
+                                                        <input type="email" id="Email" class="form-control myinputcss"
+                                                                placeholder="Email" formControlName="email">
+                                                </div>
+                                                <div class="form-group input-group-lg">
+                                                        <label for="Pincode"></label>
+                                                        <input type="text" id="Pincode" class="form-control myinputcss"
+                                                                placeholder="Pincode" formControlName="pincode">
+                                                </div>
+                                                <div class="form-group input-group-lg">
+                                                        <label for="Address"></label>
+                                                        <textarea class="form-control myinputcss" rows="3" id="Address"
+                                                                placeholder="Address"
+                                                                formControlName="address"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                        <button type="submit" class="btn btn-primary buttonCancelUpdate"
+                                                                (click)="updateEditProfileAction(editModel.value)"
+                                                                style="margin-right:20px">Update</button>
+                                                        <button type="reset"
+                                                                class="btn btn-danger buttonCancelUpdate">Cancel</button>
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                        <button type="submit"
+                                                                class="btn btn-primary  btn-block mybutton">Change
+                                                                Password</button>
+                                                </div>
 
 
-                 </div>
-                 
 
-                  </div>  
-                </form>      
+
+
+                                        </div>
+
+
+                                </div>
+                        </form>
                 </div>
 
                 <div class="col-md-4">
 
-                
 
 
 
+
+                </div>
         </div>
-</div> 
-
-    
-
-
-
