@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-change-password',
@@ -9,19 +9,19 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 export class ChangePasswordComponent  {
 
   changePasswordModel : FormGroup
-  constructor(private changepass:FormBuilder) {
+  constructor() {
 
-    this.changePasswordModel = this.changepass.group({
-      OldPassword :[''],
-      NewPassword:[''],
-      ConfirmPassword :['']
+    this.changePasswordModel = new FormGroup({
+      OldPassword :new FormControl(''),
+      Newpassword: new FormControl(''),
+      ConfirmPassword :new FormControl('')
      
     })
    }
 
-   ChangePassword(password:any){
-    alert(JSON.stringify(password))
-    console.log(JSON.stringify(password))
+   ChangePassword(passworddata:any){
+    alert(JSON.stringify(passworddata))
+    console.log(JSON.stringify(passworddata))
   
    }
 

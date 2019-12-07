@@ -3,6 +3,7 @@ import { FormsModule, FormBuilder, FormGroup, FormControl } from '@angular/forms
 import { signupService } from './signup.service';
 
 
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -34,14 +35,19 @@ export class SignUpComponent implements OnInit {
 
   public saveAction(data: any) {
 
+    sessionStorage.setItem('key',data.mobileno);
+
     //alert(JSON.stringify(a))
     console.log(JSON.stringify(data));
+  
 
 
     this.Servicesignup.saveAllUser(data).subscribe
+   
       (
         res => { this.sersignup = res },
         err => { this.sersignup = err }
+        
       );
 
 
@@ -57,8 +63,11 @@ export class SignUpComponent implements OnInit {
   codeGenerated = '';
 
   randomString() {
-    this.show_dialog = !this.show_dialog;
+
     
+    //method of generate otp 
+    this.show_dialog = !this.show_dialog;
+
     const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz';
     const stringLength = 10;
     let randomstring = '';
@@ -70,9 +79,12 @@ export class SignUpComponent implements OnInit {
     this.signupModel.get('otp').setValue(this.codeGenerated);
     return 0;
   }
+//-----------------------------------------
+
 
 
   ngOnInit() {
+  
   }
 
 }

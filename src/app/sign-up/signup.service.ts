@@ -18,6 +18,10 @@ export class  signupService{
         
         return this.http.post(url,data);
     }
+    
+
+   
+
 
 
 
