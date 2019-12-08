@@ -41,7 +41,7 @@ export class EditProfileComponent implements OnInit {
 
   ngOnInit() {
 
-    this.sessionobj = sessionStorage.getItem('key');
+    this.sessionobj = localStorage.getItem('key');
     console.log("call from nginti");
     console.log(this.sessionobj)
 
@@ -75,10 +75,14 @@ export class EditProfileComponent implements OnInit {
       res => {
         console.log(res);
         this.editModel.patchValue(res[0]);
+        console.log("from model-------------------------------")
+
+    console.log(JSON.stringify(this.editModel.value));
+
       },
       err => { this.userdata = err }
     );
-
+    
   }
 
 

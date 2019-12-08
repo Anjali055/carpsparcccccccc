@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, FormBuilder, FormGroup, FormControl } from '@angular/forms'
 import { signupService } from './signup.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 
@@ -17,7 +18,7 @@ export class SignUpComponent implements OnInit {
   public show_dialog: boolean = false;
 
 
-  constructor(private Servicesignup: signupService) {
+  constructor(private Servicesignup: signupService,private toastr: ToastrService) {
 
     this.signupModel = new FormGroup({
 
@@ -35,11 +36,12 @@ export class SignUpComponent implements OnInit {
 
   public saveAction(data: any) {
 
-    sessionStorage.setItem('key',data.mobileno);
+    localStorage.setItem('key',data.mobileno);
 
     //alert(JSON.stringify(a))
     console.log(JSON.stringify(data));
-  
+    this.toastr.success("data inserted")
+    
 
 
     this.Servicesignup.saveAllUser(data).subscribe

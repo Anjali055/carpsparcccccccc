@@ -42,7 +42,7 @@ export class SetPasswordComponent implements OnInit {
     console.log(JSON.stringify(data));
     console.log(this.temppass);
 
-    this.sessionmobile= sessionStorage.getItem('key');
+    this.sessionmobile= localStorage.getItem('key');
     console.log(this.sessionmobile);
     this.toastr.success("User is Inserted SuccessFully");
     this.setpassservice.update_password(this.temppass,this.sessionmobile).subscribe
