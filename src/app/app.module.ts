@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//toaster..
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +23,7 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
 import { ViewallComponent } from './viewall/viewall.component'
 import { viewallService } from './viewall/viewall.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 
 
@@ -51,12 +54,12 @@ import { viewallService } from './viewall/viewall.service';
     ReactiveFormsModule,
     //----imported this for service---
     HttpClientModule,
+    AppRoutingModule,
+    RouterModule.forRoot(MyRoutes),
 
-
-    
-    
-    
-    AppRoutingModule,RouterModule.forRoot(MyRoutes),
+    //toater import
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
     
   ],
   providers: [],
