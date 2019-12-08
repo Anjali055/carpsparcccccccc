@@ -15,7 +15,7 @@ import { DashBordComponent } from './dash-bord/dash-bord.component';
 //import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
-
+import { ToastrService, ToastrModule } from 'ngx-toastr';
 //formbuilder
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
@@ -51,7 +51,7 @@ import { viewallService } from './viewall/viewall.service';
     ReactiveFormsModule,
     //----imported this for service---
     HttpClientModule,
-
+    ToastrModule.forRoot(),
 
     
     

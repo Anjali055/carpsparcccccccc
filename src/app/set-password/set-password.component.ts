@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { setPasswordService } from './set-password.service';
 import { JsonPipe } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 
 
 
@@ -17,7 +18,7 @@ export class SetPasswordComponent implements OnInit {
 
   setpassowrdModule: FormGroup
 
-  constructor(private setpassservice: setPasswordService) {
+  constructor(private setpassservice: setPasswordService,private toastr: ToastrService) {
        this.setpassowrdModule = new FormGroup({
 
         varpassword: new FormControl(''),
@@ -43,7 +44,7 @@ export class SetPasswordComponent implements OnInit {
 
     this.sessionmobile= sessionStorage.getItem('key');
     console.log(this.sessionmobile);
-    
+    this.toastr.success("User is Inserted SuccessFully");
     this.setpassservice.update_password(this.temppass,this.sessionmobile).subscribe
 
     (
