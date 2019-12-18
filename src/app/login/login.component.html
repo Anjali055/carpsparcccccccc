@@ -1,4 +1,3 @@
-
 <!-- <img src="assets/background.jpg"  alt="Logo" >  -->
 
 
@@ -6,7 +5,7 @@
 <div class="jumbotron container-fliud image">
 
     <div class="row">
-        
+
         <div class="col-sm-4 col-md-4 col-xs-4"></div>
         <div class="col-sm-4 col-md-4 col-xs-4">
             <form id="log">
@@ -16,12 +15,14 @@
                 <h1 style="color: white">Login</h1>
 
                 <div class="form-group">
-                    <label for="uname"></label>
-                    <input type="text" id="uname" class="form-control" placeholder="Mobile/Email">
+                    <label for="mobileno"></label>
+                    <input type="text" id="mobileno" class="form-control" name="mobileno" placeholder="Mobile/Email"
+                        [(ngModel)]="mobileno">
                 </div>
                 <div class="form-group">
                     <label for="password"></label>
-                    <input type="text" id="password" class="form-control" placeholder="Password">
+                    <input type="text" id="password" class="form-control" name="password" placeholder="Password"
+                        [(ngModel)]="password">
                 </div>
                 <div class="checkbox">
                     <label><input type="checkbox"> Remember Me</label>
@@ -32,9 +33,10 @@
                     <div class="col-md-4"></div>
                     <!-- <div class="button_group" style="justify-content: center"> -->
                     <div class="button_group">
-                        <button type="submit" [routerLink]="['/MenuDashboard']" class="btn  btn-sm btn-success" style="margin-right: 25px">Login</button>
+                        <button type="submit" [routerLink]="['/MenuDashboard']" class="btn  btn-sm btn-success"
+                            (click)="checkLogin()" style="margin-right: 25px">Login</button>
                         <button type="reset" [routerLink]="['/']" class="btn btn-sm btn-danger">Cancel</button>
-                    </div> 
+                    </div>
                 </div>
                 <div class="col-md-3"></div>
                 <div class="col-md-3"></div>
@@ -44,10 +46,6 @@
 
                 </div>
             </form>
-
-
-
-
         </div>
         <div class="col-sm-4 col-md-4 col-xs-4"></div>
 

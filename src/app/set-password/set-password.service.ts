@@ -13,14 +13,9 @@ export class setPasswordService{
     
     update_password(varpassword:any,varmobileno:any){
 
-        let url="http://localhost:6545/api/signup/setpassupdate/"+varpassword+"/"+varmobileno;
+        let url="http://localhost:6545/api/signup/setPassupdate/"+varpassword+"/"+varmobileno;
 
         return this.http.put(url,varpassword,varmobileno);
         
     }
-
-
-   
-    
-
 }

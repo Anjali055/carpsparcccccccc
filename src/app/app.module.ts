@@ -17,13 +17,14 @@ import { DashBordComponent } from './dash-bord/dash-bord.component';
 //import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
-import { ToastrService, ToastrModule } from 'ngx-toastr';
+//import { ToastrService, ToastrModule } from 'ngx-toastr';
 //formbuilder
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
 import { ViewallComponent } from './viewall/viewall.component'
 import { viewallService } from './viewall/viewall.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { CompareValidatorDirective } from './shared/compare-validators.directive';
 
 
 
@@ -42,6 +43,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     //EditProfileComponent,
     SidebarComponent,
     ViewallComponent,
+    CompareValidatorDirective,
+    
    // ChangePasswordComponent,
    
 
@@ -49,6 +52,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     //formcontrol
     FormsModule,
     ReactiveFormsModule,

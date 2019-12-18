@@ -1,10 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { setPasswordService } from './set-password.service';
 import { JsonPipe } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
-
-
+import { compareValidator } from '../shared/compare-validators.directive';
 
 @Component({
   selector: 'app-set-password',
@@ -14,23 +13,25 @@ import { ToastrService } from 'ngx-toastr';
 
 })
 export class SetPasswordComponent implements OnInit {
-
-
-  setpassowrdModule: FormGroup
-
+setpassowrdModule: FormGroup
   constructor(private setpassservice: setPasswordService,private toastr: ToastrService) {
        this.setpassowrdModule = new FormGroup({
 
-        varpassword: new FormControl(''),
-        varconfirmPassword: new FormControl('')
+        varpassword: new FormControl('', [Validators.required, Validators.pattern('^([a-zA-Z0-9@*#]{8,15})$')]),
+        varconfirmPassword: new FormControl('', [Validators.required,compareValidator('varpassword')])
 
       })
-
-      
-
-
   }
-  
+
+  get varpassword(){
+    return this.setpassowrdModule.get('varpassword');
+  }
+
+  get varconfirmPassword(){
+    return this.setpassowrdModule.get('varconfirmPassword');
+  }
+
+
 
   subscribe_serSetpassword: any;
   sessionmobile: any;
@@ -48,22 +49,12 @@ export class SetPasswordComponent implements OnInit {
     this.setpassservice.update_password(this.temppass,this.sessionmobile).subscribe
 
     (
-      res => { this.subscribe_serSetpassword=res },
+      res => { this.subscribe_serSetpassword = res },
       err => { this.subscribe_serSetpassword = err }
       
     );
-
-
-
-
   }
-  
-
-
   ngOnInit() {
-
-   
-    
   }
 
 }

@@ -12,11 +12,10 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 
 //import {} from './sign-up/SignupCustomModule'
 //import{} from './edit-profile/editmodule.module#EditCustomModule'
-
-
-
 import { BookingForWashComponent } from './booking-for-wash/booking-for-wash.component';
 import { ViewallComponent } from './viewall/viewall.component';
+import { AuthGuardService } from './login/authGuard.service';
+import { AuthenticationService } from './login/authntication.service';
 export const MyRoutes: Routes =
     [
         { path: '', component: LoginComponent },
@@ -25,9 +24,8 @@ export const MyRoutes: Routes =
         { path: 'usersignUp', loadChildren: './sign-up/SignupCustomModule#SignupCustomModule' },
         { path: 'setPassword', component: SetPasswordComponent },
         //{ path: 'ForgotPassword', component: ForgotPasswordComponent },
+        {path : 'login',component:LoginComponent},
         {path:'ForgotPassword',loadChildren:'./forgot-password/ForgotPasswordCustomModule#ForgotPasswordCustomModule'},
-    
-        
         {
             path: 'MenuDashboard', component: DashBordComponent,
             children: [
@@ -39,7 +37,6 @@ export const MyRoutes: Routes =
                 
                // { path: 'chagepassword', component: ChangePasswordComponent }
             ]
-
         }
     ]
 
