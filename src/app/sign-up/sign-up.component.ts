@@ -3,8 +3,6 @@ import { FormsModule, FormBuilder, FormGroup, FormControl } from '@angular/forms
 import { signupService } from './signup.service';
 import { ToastrService } from 'ngx-toastr';
 
-
-
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -23,7 +21,7 @@ export class SignUpComponent implements OnInit {
     this.signupModel = new FormGroup({
 
       name: new FormControl(''),
-      mobileno: new FormControl(),
+      mobileno: new FormControl(''),
       email: new FormControl(''),
       otp: new FormControl('')
 
@@ -41,8 +39,6 @@ export class SignUpComponent implements OnInit {
     //alert(JSON.stringify(a))
     console.log(JSON.stringify(data));
     this.toastr.success("data inserted")
-    
-
 
     this.Servicesignup.saveAllUser(data).subscribe
    
@@ -51,8 +47,6 @@ export class SignUpComponent implements OnInit {
         err => { this.sersignup = err }
         
       );
-
-
 
   }
 

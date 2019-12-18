@@ -7,11 +7,7 @@ export class  signupService{
 
     constructor(private http:HttpClient){
 
-
     }
-
-    
-  
 
     public saveAllUser(data){
         let url="http://localhost:6545/api/signup/createUser";
@@ -19,12 +15,4 @@ export class  signupService{
         return this.http.post(url,data);
     }
     
-
-   
-
-
-
-
-    
-
 }

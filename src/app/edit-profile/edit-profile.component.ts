@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { editProfileService } from './editProfile.service';
 import { userSignupModel } from '../model/userSignupmodel'
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -14,27 +16,30 @@ export class EditProfileComponent implements OnInit {
 
 
   editModel: FormGroup;
-
+  submitted = false;
   sigupclassobj;
-  constructor(private epservice: editProfileService) {
+  constructor(private epservice: editProfileService,private router: Router,private toastr:ToastrService) {
 
     //assigning usermodelobject to tempobj(sigupclassobj)
     this.sigupclassobj = userSignupModel;
 
     this.editModel = new FormGroup({
 
-      name: new FormControl(''),
-      mobileno: new FormControl(''),
-      email: new FormControl(''),
-      pincode: new FormControl(''),
-      address: new FormControl(''),
+      name: new FormControl('',Validators.required),
+      mobileno: new FormControl('',Validators.required),
+      email: new FormControl('',[Validators.required,Validators.email]),
+      pincode: new FormControl('',Validators.required),
+      address: new FormControl('',Validators.required),
       id: new FormControl(0),
       otp:new FormControl(''),
       password:new FormControl(''),
 
     })
   }
-
+  
+  gotoPageChangePassword() {
+    this.router.navigate(['MenuDashboard/changepassword']);
+  }
   sessionobj: any;
   getmethoddata: any;
   userdata: any;
@@ -55,6 +60,8 @@ export class EditProfileComponent implements OnInit {
     //console.log(htmObject);
     console.log("data from the model.....")
     console.log(JSON.stringify(this.editModel.value));
+
+    this.toastr.success("User is Inserted SuccessFully");
 
 
     this.epservice.updateRecord(this.editModel.value).subscribe(res => { this.userdata = res },
@@ -86,6 +93,18 @@ export class EditProfileComponent implements OnInit {
   }
 
 
+  get f() { return this.editModel.controls; }
 
+  onSubmit() {
+      this.submitted = true;
+
+      // stop here if form is invalid
+      if (this.editModel.invalid) {
+          return;
+      }
+
+      alert('SUCCESS!! :-)')
+
+}
 
 }

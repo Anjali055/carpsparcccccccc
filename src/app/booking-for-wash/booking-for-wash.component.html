@@ -15,13 +15,13 @@
             <div class="form-group input-group-lg">
               <label for="vehicleName/Model"></label>
               <input type="text" id="vehicleName/Model" class="form-control myinputcss" style="margin-top: 100px;"
-                placeholder="Vehicle Name/Model" formControlName="vihiclename">
+                placeholder="Vehicle Name/Model" formControlName="vehicleName">
             </div>
 
             <div class="form-group input-group-lg">
               <div class="col-sm-5"></div>
               <select id="inputState" class=" alert form-rounded form-control myinputcss col-sm-12 form-control-lg"
-                placeholder="Vehicle Type" formControlName="vehicletype">
+                placeholder="Vehicle Type" formControlName="vehicleType">
                 <option value="">Vehicle Type</option>
                 <option selected>2 Wheeler</option>
 
@@ -45,13 +45,13 @@
             <div class="form-group input-group-lg">
               <div class="col-sm-5"></div>
               <select id="inputState" class=" alert form-rounded form-control myinputcss col-sm-12 form-control-lg"
-                placeholder="Vehicle Type" formControlName="servicetype">
-                <option value="">Vehicle Type</option>
-                <option selected>2 Wheeler</option>
+                placeholder="Vehicle Type" formControlName="serviceType">
+                <option value="">Service Type</option>
+                <option selected>Wash</option>
 
-                <option selected>3 Wheeler</option>
-                <option selected>4 Wheeler</option>
-                <option selected>6 Wheeler</option>
+                <option selected>Maintenance</option>
+                <option selected>Wash / Maintenance</option>
+                <option selected>Other</option>
                 <option selected>Cancel</option>
 
               </select>
@@ -60,25 +60,25 @@
             <div class="form-group input-group-lg">
               <div class="col-sm-5"></div>
               <textarea class=" alert form-rounded form-control col-sm-12" rows="2" id="comment"
-                placeholder="Requirements/Description*" formControlName="requireDescription"></textarea>
+                placeholder="Requirements/Description*" formControlName="description"></textarea>
             </div>
 
             <div class="form-group input-group-lg">
               <label for="arealocation"></label>
               <input type="text" id="arealocation" class="form-control myinputcss" placeholder="Area Location"
-                formControlName="arealocation">
+                formControlName="location">
             </div>
             <div>
               <label for="pickup" class="col-sm-5 alert-link mx-xl-n2 myinputcss" style="color: aliceblue;">Need
                 Pick-up</label>
               <div class="custom-control custom-radio custom-control-inline">
                 <input type="radio" class="custom-control-input" id="customRadio" value="Yes"
-                  formControlName="needpickup">
+                  formControlName="pickup">
                 <label class="custom-control-label" for="customRadio">Yes</label>
               </div>
               <div class="custom-control custom-radio custom-control-inline">
                 <input type="radio" class="custom-control-input" id="customRadio2" value="No"
-                  formControlName="needpickup">
+                  formControlName="pickup">
                 <label class="custom-control-label" for="customRadio2">No</label>
               </div>
             </div>
@@ -92,7 +92,7 @@
             <div class="form-group input-group-lg">
               <label for="budprice"></label>
               <input type="text" id="budprice" class="form-control myinputcss" placeholder="Budget Price"
-                formControlName="budprice">
+                formControlName="budget">
             </div>
             <div class="form-group">
               <button type="submit" class="btn btn-primary buttonCancelUpdate ml-5"
